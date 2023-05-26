@@ -5,7 +5,7 @@
         <h1>i Nostri treni</h1>
         <div class="row row-cols-3">
             @foreach ($trains as $train)
-                <div class="col">
+                <div class="col p-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Treno dell'azienda: {{ $train->Azienda }}</h5>
