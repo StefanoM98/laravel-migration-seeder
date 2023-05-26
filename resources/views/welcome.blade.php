@@ -9,7 +9,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Treno dell'azienda: {{ $train->Azienda }}</h5>
-                            <p class="card-text">Il treno è partito: {{ $train->Orari_di_partenza }}</p>
+                            <p class="card-text">Il treno è partito: {{ $train->Orario_di_partenza }}</p>
+                            <p class="card-text">Il treno è partito: {{ $train->Orario_di_arrivo }}</p>
+                            <p class="card-text">Ed è diretto: {{ $train->Stazione_di_partenza }}</p>
                             <p class="card-text">Ed è diretto: {{ $train->Stazione_di_arrivo }}</p>
 
                         </div>

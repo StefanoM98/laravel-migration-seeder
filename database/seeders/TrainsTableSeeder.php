@@ -18,11 +18,11 @@ class TrainsTableSeeder extends Seeder
     {
         for ($i = 0; $i < 10; $i++) {
             $train = new Train();
-            $train->Azienda = $faker->text(10);
-            $train->Stazione_di_partenza = $faker->city();
-            $train->Stazione_di_arrivo = $faker->city();
-            $train->Orario_di_partenza = $faker->randomElement(['oggi', 'domani', 'dopodomani']);
-            $train->Orario_di_arrivo = $faker->randomElement(['oggi', 'domani', 'dopodomani']);
+            $train->Azienda = $faker->company();
+            $train->Stazione_di_partenza = $faker->randomElement(['Roma', 'Napoli', 'Milano']);
+            $train->Stazione_di_arrivo = $faker->randomElement(['Bari', 'Firenze', 'Torino']);
+            $train->Orario_di_partenza = $faker->dateTimeBetween('-1 day', '+1 day');
+            $train->Orario_di_arrivo = $faker->dateTimeBetween('+1 day', '+2 day');
             $train->Codice_treno = $faker->numberBetween(1000, 10000);
             $train->Numero_carrozze = $faker->numberBetween(3, 20);
             $train->In_orario = $faker->randomElement([true, false]);
